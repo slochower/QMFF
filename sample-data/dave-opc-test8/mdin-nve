@@ -1,0 +1,22 @@
+
+Production, NVE, 20ps
+&cntrl
+  ntx=5,
+  irest=1,
+  ntc=2,
+  ntf=2,
+  dt=0.001,
+  nstlim=20000,
+  cut=8.0,
+  temp0=298.16,
+  iwrap=0,
+  nscm=0,
+  ntt=0,
+  ntpr=20000,
+  ntwr=20000,
+  ntxo=2,
+  ntwx=1000,
+  ioutfm=1,
+  ntwe=500,
+/
+    

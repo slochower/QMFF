@@ -1,0 +1,6 @@
+
+    parm sample-data/dave-opc-test/full.topo
+    trajin sample-data/dave-opc-test6/traj.nve.99
+    unwrap
+    diffusion average 1
+    

@@ -1,0 +1,10 @@
+
+Minimization
+&cntrl
+  imin=1,
+  maxcyc=10000,
+  ncyc=100,
+  ntpr=100,
+  ntxo=1, 
+/
+    

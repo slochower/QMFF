@@ -1,0 +1,17 @@
+
+tolerance 2.0
+filetype pdb
+output mixture.pdb
+seed 815031384
+
+structure 12d.pdb
+  number 0
+  inside cube 0. 0. 0. 29.43383
+end structure
+
+structure opc.pdb
+  number 1000
+  inside cube 0. 0. 0. 29.43383
+end structure
+
+    

@@ -1,0 +1,17 @@
+
+source leaprc.protein.ff14SB
+source leaprc.gaff
+    loadamberparams eth.frcmod
+ETH = loadmol2 eth.mol2
+WAT = OPC
+source leaprc.water.opc
+
+model = loadpdb mixture.pdb
+
+setbox model vdw
+
+savepdb model full.pdb
+saveamberparm model full.topo full.crds
+
+quit
+    

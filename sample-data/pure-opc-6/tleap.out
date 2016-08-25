@@ -1,0 +1,81 @@
+-I: Adding /home/henrikse/amber16intel/dat/leap/prep to search path.
+-I: Adding /home/henrikse/amber16intel/dat/leap/lib to search path.
+-I: Adding /home/henrikse/amber16intel/dat/leap/parm to search path.
+-I: Adding /home/henrikse/amber16intel/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap.in
+----- Source: /home/henrikse/amber16intel/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /home/henrikse/amber16intel/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /home/henrikse/amber16intel/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /home/henrikse/amber16intel/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /home/henrikse/amber16intel/dat/leap/lib/amino12.lib
+Loading library: /home/henrikse/amber16intel/dat/leap/lib/aminoct12.lib
+Loading library: /home/henrikse/amber16intel/dat/leap/lib/aminont12.lib
+----- Source: /home/henrikse/amber16intel/dat/leap/cmd/leaprc.gaff
+----- Source of /home/henrikse/amber16intel/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: ./gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.7, Nov 2013)
+Loading parameters: ./thf.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading Mol2 file: ./thf.mol2
+Reading MOLECULE named THF
+----- Source: /home/henrikse/amber16intel/dat/leap/cmd/leaprc.water.opc
+----- Source of /home/henrikse/amber16intel/dat/leap/cmd/leaprc.water.opc done
+Loading library: /home/henrikse/amber16intel/dat/leap/lib/atomic_ions.lib
+Loading library: /home/henrikse/amber16intel/dat/leap/lib/solvents.lib
+Loading parameters: /home/henrikse/amber16intel/dat/leap/parm/frcmod.opc
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for OPC water (JPCL, 2014, 5 (21), pp 3863–3871) 
+Loading parameters: /home/henrikse/amber16intel/dat/leap/parm/frcmod.ionsjc_tip4pew
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP4P/EW water from Joung & Cheatham JPCB (2008)
+Loading parameters: /home/henrikse/amber16intel/dat/leap/parm/frcmod.ions234lm_126_tip4pew
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP4P/EW water model (12-6 normal usage set)
+Loading PDB file: ./mixture.pdb
+  total atoms in file: 3000
+  Leap added 1000 missing atoms according to residue templates:
+       1000 H / lone pairs
+Box dimensions:  32.985335 32.986335 32.988335
+Writing pdb file: full.pdb
+   printing CRYST1 record to PDB file with box info
+Checking Unit.
+
+ -- ignoring the warnings.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	WAT	1000
+  )
+ (no restraints)
+	Quit
