@@ -51,3 +51,6 @@ md-data/
 
 # Files starting with tilde (MS Word)
 ~*
+
+# git pytraj/cpptraj
+code/pytraj/
