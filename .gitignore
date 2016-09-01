@@ -55,3 +55,7 @@ md-data/
 # git pytraj/cpptraj
 code/pytraj/
 sample-data/loop/
+qmff-explorations/density/
+
+# c3! testing!
+parameters-c3*
