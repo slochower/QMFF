@@ -15,6 +15,6 @@ def get_density(parameter_file, trajectory_file, experimental, debug=True):
     density_sem = sc.stats.sem((np.sum(pt_trajectory.topology.mass) * 1.660539040) /
                        pt.volume(pt_trajectory))
     if debug:
-        # print('Density = {} +/- {}'.format(density_mean, density_sem))
+        print('Density = {} +/- {}'.format(density_mean, density_sem))
     
-    return abs(experimental - density_mean)
+    return density_mean, abs(experimental - density_mean)

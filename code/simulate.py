@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-def simulate(target, parameter_file):
+def simulate(parameter_file, trajectory_file):
     '''
     This will write a new run script for each parameter set,
     and then execute it.
@@ -11,14 +11,19 @@ def simulate(target, parameter_file):
     source $AMBERHOME/amber.sh
     export CUDA_VISIBLE_DEVICES=1
     export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64
-    pmemd.cuda -O -p {} -c full.crds -i mdin-10ps -o mdout.001 -r rst.001 -x traj.001 -e mden.001 -inf mdinfo.001
-    '''.format(parameter_file)
-    file = open('{}/run.sh'.format(target), 'w')
+    pmemd.cuda -O -p {} -c full.crds -i mdin-10ps -o mdout.001 -r rst.001 -x {} -e mden.001 -inf mdinfo.001
+    '''.format(parameter_file, trajectory_file)
+    file = open('run.sh', 'w')
     file.write(run_script)
     file.close()
     try:
-        os.chdir(target)
         subprocess.call(['bash', 'run.sh'])
-        os.chdir('../../../code/')
     except:
         print('Problem executing the MD run script.')
+
+    # We need some error handling to grep (?) the MD output file for errors.
+
+    # Check for NAN
+    # Check for ****
+    # Check from TIMING in mdout
+    # Restart from previous rst.
