@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-def simulate(parameter_file, trajectory_file):
+def simulate(parameter_file, trajectory_file, debug=False):
     '''
     This will write a new run script for each parameter set,
     and then execute it.
@@ -21,9 +21,13 @@ def simulate(parameter_file, trajectory_file):
     except:
         print('Problem executing the MD run script.')
 
+    # Delete files... 
+
     # We need some error handling to grep (?) the MD output file for errors.
 
     # Check for NAN
     # Check for ****
     # Check from TIMING in mdout
     # Restart from previous rst.
+    # Add equilibration
+    # Cleanup after simulations unless debug=True
